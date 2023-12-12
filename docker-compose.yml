@@ -1,0 +1,11 @@
+version: "2"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: nginx.dockerfile
+    container_name: nginx-dev
+    ports:
+      - 8080:80
+    volumes: 
+      - ./src:/usr/share/nginx/html
